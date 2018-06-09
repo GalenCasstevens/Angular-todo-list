@@ -1,0 +1,15 @@
+<label for="">Todo Description:</label>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="todoInput"
+>
+<button
+  class="btn btn-primary"
+  [disabled]="todoInput === ''"
+  (click)="onNewTodo($event)">Add Todo</button>
+<ul>
+  <li *ngFor="let todo of todoList">
+    {{ todo }}
+  </li>
+</ul>
